@@ -6,10 +6,16 @@ pipeline{
                 echo 'npm install'
             }
         }
-        stage('Run tests'){
+        stage('NPM audit test'){
+            steps{
+                echo 'npm audit'
+            }
+        }
+        stage('Run  integration tests'){
             steps{
                 echo 'npm run test'
             }
         }
+        
     }
 }
